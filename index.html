@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>QR Code</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>428571</title>
+		<style>
+			* { margin: 0; padding: 0; }
+			.container { width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; background-color: white; flex-direction: column; }
+		</style>
 		<script>
-			var ua = navigator.userAgent.toUpperCase();
-			if (ua.indexOf("MICROMESSENGER") > -1) {
-				window.location.href = "153677b2-5449-450d-9fc6-e18a1b35a15c.png";
-			} else if (ua.indexOf("DINGTALK") > -1) {
-				window.location.href = "https://h5.dingtalk.com/zproject/profile.html?profile=%40kgDOAAxOUQ&cardToken=f6b844cbc0";
-			} else {
-				window.location.href = "533d3c94-21b3-4173-aca3-defc77600f03.png";
+			window.onload = function() {
+				var ua = navigator.userAgent.toUpperCase();
+				for (var i = 0; i < 1; i++) {
+					if (ua.indexOf("DINGTALK") > -1) {
+						window.location.href = "https://h5.dingtalk.com/zproject/profile.html?profile=%40kgDOAAxOUQ&cardToken=f6b844cbc0";
+						break;
+					}
+					if (ua.indexOf("MICROMESSENGER") > -1) {
+						document.getElementById("image").src = "932428.jpg";
+						break;
+					}
+					document.getElementById("image").src = "26339.png";
+					window.location.href = "tel:+8618915959890";
+				}
 			}
 		</script>
 	</head>
+	<body>
+		<div class="container">
+			<a href="tel:+8618915959890"><img id="image" src="" alt=""></a>
+		</div>
+	</body>
 </html>
