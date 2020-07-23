@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title></title>
+		<title>...</title>
 		<style>
 			* { margin: 0; padding: 0; }
 			.container { width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; background-color: white; flex-direction: column; }
@@ -12,15 +12,14 @@
 			window.onload = function() {
 				var ua = navigator.userAgent.toUpperCase();
 				for (var i = 0; i < 1; i++) {
-					if (ua.indexOf("DINGTALK") > -1) {
-						window.location.href = "https://h5.dingtalk.com/zproject/profile.html?profile=%40kgDOAAxOUQ&cardToken=f6b844cbc0";
-						break;
-					}
 					if (ua.indexOf("MICROMESSENGER") > -1) {
 						document.getElementById("image").src = "932428.jpg";
 						break;
 					}
-					document.getElementById("image").src = "263339.png";
+					if (ua.indexOf("DINGTALK") > -1) {
+						window.location.href = "https://h5.dingtalk.com/zproject/profile.html?profile=%40kgDOAAxOUQ&cardToken=f6b844cbc0";
+						break;
+					}
 					window.location.href = "tel:+8618915959890";
 				}
 			}
@@ -28,7 +27,7 @@
 	</head>
 	<body>
 		<div class="container">
-			<a href="tel:+8618915959890"><img id="image" src="" alt=""></a>
+			<a href="tel:+8618915959890"><img id="image" src="263339.png" alt=""></a>
 		</div>
 	</body>
 </html>
